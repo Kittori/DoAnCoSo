@@ -6,6 +6,7 @@ const handlebars = require('express-handlebars');
 
 // Import index router
 const IndexRouter = require('./routes/index.route');
+const getConnection = require('./database/sql');
 
 // Create a new express application instance
 const app = express();
@@ -21,7 +22,14 @@ app.use(IndexRouter);
 //Set static folder
 app.use('/assets',express.static(__dirname + '/../assets'));
 
-// Start the server
-app.listen(4000, () => {
+const pool = getConnection;
+if(pool) {
+    console.log('connected to database');
+
+    // Start the server
+    app.listen(4000, () => {
     console.log('Server started on port 4000');
-});
+    });
+} else {
+    console.log('Failed to connect to database');
+}
