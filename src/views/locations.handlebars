@@ -1,0 +1,41 @@
+<header class="header" data-aos="fade-down">
+
+    <section class="flex">
+
+      <a href="http://localhost:4000/" class="logo">VietNamTravia</a>
+
+      <nav class="navbar">
+         <a href="http://localhost:4000/">home</a>
+         <a href="http://localhost:4000/about">about</a>
+         <a href="http://localhost:4000/tours">tours</a>
+         <a href="http://localhost:4000/locations">destinations</a>
+         <a href="http://localhost:4000/contact">contact</a>
+      </nav>
+
+      <div id="menu-btn" class="fas fa-bars"></div>
+
+   </section>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- destinations section starts  -->
+
+<div class="container destinations">
+
+   <h1 class="heading" data-aos="zoom-out">destinations</h1>
+
+   <section class="grid">
+      {{#each locations}}
+      <div class="box" data-aos="zoom-in">
+         <img src="/assets/media/images/{{loca_Image}}" alt="">
+         <h3><span>{{loca_Name}}</span></h3>
+      </div>
+      {{/each}}
+
+   </section>
+
+</div>
+
+<!-- destinations section ends -->

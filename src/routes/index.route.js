@@ -5,18 +5,22 @@ const { Router } = require('express');
 const IndexController = require('../controllers/index.controller');
 const AboutRouter = require('../routes/about.route');
 const ToursRouter = require('./tours.route');
-const DesRouter = require('./destinations.route');
 const ContactRouter = require('./contact.route');
+const AccountRoute = require('./account.route');
+const LocationsRoute = require('./locations.route');
+const RegisterRoute = require('./register.route')
 
 // Create a new router
-const IndexRoute = Router();
+const IndexRoute = Router;
 
 // Set the index route
 IndexRoute.get('/', IndexController.index);
 IndexRoute.use('/about',AboutRouter);
 IndexRoute.use('/tours',ToursRouter);
-IndexRoute.use('/destinations',DesRouter);
 IndexRoute.use('/contact',ContactRouter);
+IndexRoute.use('/account',AccountRoute);
+IndexRoute.use('/locations',LocationsRoute);
+IndexRoute.use('/register',RegisterRoute);
 
 // Export the router
 module.exports = IndexRoute;

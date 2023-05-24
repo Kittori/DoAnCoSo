@@ -118,12 +118,60 @@ section{
 .header .flex .navbar a:hover{
    color: var(--white);
 }
+.Icon div{
+   color: white;
+   cursor: pointer;
+   font-size: 2.5rem;
+   margin-left: 1.5rem;
+}
+.Icon div:hover #search-btn{
+   color:rgb(109, 192, 255);
+}
 
 #menu-btn{
-   font-size: 2.5rem;
-   cursor: pointer;
-   color: var(--white);
    display: none;
+   color: white;
+   cursor: pointer;
+   margin-left: 1.5rem;
+}
+
+.search-form{
+   position: absolute;
+   top:115%;
+   right:7%;
+   background: white;
+   box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+   width: 50rem;
+   height: 5rem;
+   display:flex;
+   align-items: center;
+   transform: scaleY(0);
+   transform-origin: top;
+}
+
+.search-form #search-box{
+   border-radius: 1rem;
+}
+
+.search-form.active{
+   transform: scaleY(1);
+}
+.search-form input{
+   height: 100%;
+   width: 100%;
+   font-size: 1.6rem;
+   color: black;
+   padding: 1rem;
+   text-transform: none;
+}
+.search-form label{
+   cursor: pointer;
+   font-size: 2.2rem;
+   margin-right: 1.5rem;
+   color: var(--light-black);
+}
+.search-form label:hover{
+   color:var(--main-color);
 }
 
 .home{
@@ -579,6 +627,9 @@ section{
 
 
 
+
+
+
 /* media queries  */
 
 @media (max-width:991px){
@@ -631,6 +682,11 @@ section{
    .header .flex .navbar a:hover{
       background-color: var(--light-bg);
    }
+
+   .search-form{
+      width:90%;
+      right: 2rem;
+  }
 
    .heading{
       font-size: 3rem;

@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="/assets/css/register.css">
+
+<div class="login">
+	<h1>{{register}}</h1>
+	<form action="/register/create" method="post">
+		<label for="acc_F_Name">
+			<!-- font awesome icon -->
+			<i class="fas fa-user"></i>
+		</label>
+	    <input type="text" name="acc_F_Name" placeholder="User first name" id="acc_F_Name" required>
+
+        <label for="acc_L_Name">
+			<!-- font awesome icon -->
+			<i class="fas fa-user"></i>
+		</label>
+	    <input type="text" name="acc_L_Name" placeholder="User last name" id="acc_L_Name" required>
+
+        <label for="acc_Account">
+			<!-- font awesome icon -->
+			<i class="fas fa-user"></i>
+		</label>
+	    <input type="text" name="acc_Account" placeholder="Account Name" id="acc_Account" required>
+
+		<label for="acc_Password">
+			<i class="fas fa-lock"></i>
+		</label>
+	    <input type="password" name="password" placeholder="Password" id="acc_Password" required>
+
+        <label for="acc_Email">
+			<!-- font awesome icon -->
+			<i class="fas fa-email"></i>
+		</label>
+	    <input type="text" name="acc_Email" placeholder="Email" id="acc_Email" required>
+
+        <label for="acc_Birth">
+			<!-- font awesome icon -->
+			<i class="fas fa-user"></i>
+		</label>
+	    <input type="date" name="acc_Birth" placeholder="day of birth" id="acc_Birth" required>
+
+        <label for="acc_Phone">
+			<!-- font awesome icon -->
+			<i class="fas fa-user"></i>
+		</label>
+	    <input type="text" name="acc_Phone" placeholder="Phone Number" id="acc_Phone" required>
+
+        <label for="acc_Gender">
+			<!-- font awesome icon -->
+			<i class="fas fa-user"></i>
+		</label>
+	    <input type="text" name="acc_Gender" placeholder="Gender" id="acc_Gender" required>
+
+        <label for="acc_Role">
+			<!-- font awesome icon -->
+			<i class="fas fa-user"></i>
+		</label>
+	    <input type="text" name="acc_Role" placeholder="Role" id="acc_Role" required>
+
+	     <button type="submit" class="btn btn-primary">{{register}}</button>
+	</form>
+</div>

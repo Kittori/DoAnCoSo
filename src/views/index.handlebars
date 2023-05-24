@@ -4,17 +4,25 @@
 
    <section class="flex">
 
-      <a href="http://localhost:4000/" class="logo">Travia.</a>
+      <a href="http://localhost:4000/" class="logo">VietNamTravia</a>
 
       <nav class="navbar">
          <a href="http://localhost:4000/">home</a>
          <a href="http://localhost:4000/about">about</a>
          <a href="http://localhost:4000/tours">tours</a>
-         <a href="http://localhost:4000/destinations">destinations</a>
+          <a href="http://localhost:4000/locations">destinations</a>
          <a href="http://localhost:4000/contact">contact</a>
       </nav>
 
-      <div id="menu-btn" class="fas fa-bars"></div>
+      <div class="Icon">
+         <div class="fas fa-search" id="search-btn"> </div>
+         <div class="fas fa-bars" id="menu-btn"> </div>
+      </div>
+
+      <div class="search-form" style="border-radius: 0.5rem;">
+         <input type="search" id="search-box" name="keyword" placeholder="Searching . . .">
+         <label for="search-box" class="fas fa-search"></label>
+      </div>
 
    </section>
 
