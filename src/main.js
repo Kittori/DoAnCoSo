@@ -18,15 +18,15 @@ app.engine('handlebars', handlebars.engine());
 app.set('view engine', 'handlebars');
 app.set('views', __dirname + '/views');
 
+//Set body parsing
+app.use(bodyParser.urlencoded({ extended: false}));
+app.use(bodyParser.json());
+
 // Set main route for the application
 app.use(IndexRouter);
 
 //Set static folder
 app.use('/assets',express.static(__dirname + '/../assets'));
-
-//Set body parsing
-app.use(bodyParser.urlencoded({ extended: false}));
-app.use(bodyParser.json());
 
 (async () =>{
     const pool = await getConnection();

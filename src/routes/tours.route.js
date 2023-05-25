@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const myTours = require('../controllers/tours.controller');
 
-const ToursRoute = Router;
+const ToursRoute = Router();
 
 ToursRoute.get('/', myTours.getTours);
 

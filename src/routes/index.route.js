@@ -11,16 +11,16 @@ const LocationsRoute = require('./locations.route');
 const RegisterRoute = require('./register.route')
 
 // Create a new router
-const IndexRoute = Router;
+const IndexRoute = Router();
 
 // Set the index route
-IndexRoute.get('/', IndexController.index);
 IndexRoute.use('/about',AboutRouter);
 IndexRoute.use('/tours',ToursRouter);
 IndexRoute.use('/contact',ContactRouter);
 IndexRoute.use('/account',AccountRoute);
 IndexRoute.use('/locations',LocationsRoute);
 IndexRoute.use('/register',RegisterRoute);
+IndexRoute.get('/', IndexController.index);
 
 // Export the router
 module.exports = IndexRoute;

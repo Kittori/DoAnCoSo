@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const LocationsController = require('../controllers/locations.controller');
 
-const LocationsRoute = Router;
+const LocationsRoute = Router();
 
 LocationsRoute.get('/create', LocationsController.createLocations);
 LocationsRoute.get('/', LocationsController.getLocations);
