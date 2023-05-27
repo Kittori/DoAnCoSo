@@ -7,7 +7,7 @@ const LocationsModel = require('../models/location.model');
  * @param {NextFunction} next 
  */
 async function createLocations(req, res, next) {
-    const result = await LocationsModel.create('Mui Ne','muine.jpg','Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Aperiam Voluptate Accusantium Repellat Aliquam Esse Odit Commodi Est Cumque Perferendis Rem Veritatis Minus Aliquid Delectus Eligendi.');
+    const result = await LocationsModel.create('Mui Ne','muiNe.jpg','Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Aperiam Voluptate Accusantium Repellat Aliquam Esse Odit Commodi Est Cumque Perferendis Rem Veritatis Minus Aliquid Delectus Eligendi.','Mui-Ne-Locations');
     return res.send(result);
 }
 
@@ -24,6 +24,8 @@ async function getLocations(req, res, next) {
     return res.render('locations', { locations: result.recordset});
 }
 
+
 exports.createLocations = createLocations;
 exports.getLocations = getLocations;
+
 

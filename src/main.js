@@ -19,7 +19,7 @@ app.set('view engine', 'handlebars');
 app.set('views', __dirname + '/views');
 
 //Set body parsing
-app.use(bodyParser.urlencoded({ extended: false}));
+app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 
 // Set main route for the application

@@ -1,5 +1,6 @@
 const { Router } = require('express');
 const LocationsController = require('../controllers/locations.controller');
+const LocationsModel = require('../models/location.model');
 
 const LocationsRoute = Router();
 

@@ -93,3 +93,11 @@ async function create(acc_F_Name,acc_L_Name,acc_Account,acc_Password,acc_Email,a
     }
         return null;
 }
+
+    tours_Name,loca_ID,tours_Date,tours_Day,tours_Pric,tours_Image_1 ,tours_Image_2,tours_Image_3 ,tours_Image_4 ,tours_Description
+
+     bo_userName, bo_userEmail, acc_ID, tours_ID, bo_userPhone, bo_locaName, bo_checkInDate, bo_numberTourist, bo_note
+
+     select tours_ID from tours where tours_Name = '{$tours_Name}';
+
+     

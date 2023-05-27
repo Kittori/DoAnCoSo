@@ -7,8 +7,8 @@ const AccountModel = require('../models/account.model')
  * @param {NextFunction} next 
  */
 async function createAccount(req, res, next) {
-    const result = await AccountModel.create('Nguyen Van','ABc','NguyenVanABc','12345','NguyenVanABc@gmail.com','2000-01-01','0123456789','M','A');
-    return res.render(result);
+    const result = await AccountModel.create('Nguyen Van','ABc','NguyenVanABc','12345','NguyenVanABc@gmail.com','2000-01-01','0123456789');
+    return res.send(result);
 }
 
 /**

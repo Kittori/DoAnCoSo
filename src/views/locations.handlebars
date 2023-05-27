@@ -29,11 +29,12 @@
    <section class="grid">
       {{#each locations}}
       <div class="box" data-aos="zoom-in">
-         <img src="/assets/media/images/{{loca_Image}}" alt="">
-         <h3><span>{{loca_Name}}</span></h3>
+         <a href="/course_L/{{loca_Slug}}">
+            <img src="/assets/media/images/{{loca_Image}}" alt="">
+            <h3><span>{{loca_Name}}</span></h3>
+         </a>
       </div>
       {{/each}}
-
    </section>
 
 </div>

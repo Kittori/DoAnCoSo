@@ -29,55 +29,15 @@
    <h1 class="heading" data-aos="zoom-out">popular places</h1>
 
    <section class="grid">
-
-      <div class="box" data-aos="fade-up">
-         <div class="price"><i class="fas fa-dollar-sign"></i><span>1299</span></div>
-         <img src="/assets/media/images/tour-img-1.jpg" class="image" alt="">
-         <h3 class="name">Spring into Adventure</h3>
-         <p class="address">Hoi An, Quang Nam</p>
-         <a href="#" class="btn">send enquiry</a>
-      </div>
-
-      <div class="box" data-aos="fade-up">
-         <p class="price"><i class="fas fa-dollar-sign"></i><span>1999</span></p>
-         <img src="/assets/media/images/tour-img-2.jpg" alt="" class="image">
-         <h3 class="name">Spring into Adventure</h3>
-         <p class="address">Ha Long Bay, Quang Ninh</p>
-         <a href="#" class="btn">send enquiry</a>
-      </div>
-
-      <div class="box" data-aos="fade-up">
-         <p class="price"><i class="fas fa-dollar-sign"></i><span>3000</span></p>
-         <img src="/assets/media/images/tour-img-3.jpg" alt="" class="image">
-         <h3 class="name">Spring into Adventure</h3>
-         <p class="address">Sapa, Lao Cai</p>
-         <a href="#" class="btn">send enquiry</a>
-      </div>
-
-      <div class="box" data-aos="fade-up">
-         <p class="price"><i class="fas fa-dollar-sign"></i><span>1203</span></p>
-         <img src="/assets/media/images/tour-img-4.jpg" alt="" class="image">
-         <h3 class="name">Spring into Adventure</h3>
-         <p class="address">Thien Mu, Hue</p>
-         <a href="#" class="btn">send enquiry</a>
-      </div>
-
-      <div class="box" data-aos="fade-up">
-         <p class="price"><i class="fas fa-dollar-sign"></i><span>1999</span></p>
-         <img src="/assets/media/images/tour-img-5.jpg" alt="" class="image">
-         <h3 class="name">Spring into Adventure</h3>
-         <p class="address">Golden Bridge, Da Nang</p>
-         <a href="#" class="btn">send enquiry</a>
-      </div>
-
-      <div class="box" data-aos="fade-up">
-         <p class="price"><i class="fas fa-dollar-sign"></i><span>1000</span></p>
-         <img src="/assets/media/images/tour-img-6.jpg" alt="" class="image">
-         <h3 class="name">Spring into Adventure</h3>
-         <p class="address">Mui Ne, Phan Thiet</p>
-         <a href="#" class="btn">send enquiry</a>
-      </div>
-
+      {{#each tours}}
+         <div class="box" data-aos="fade-up">
+            <div class="price"><i class="fas fa-dollar-sign"></i><span>{{tours_Price}}</span></div>
+            <img src="/assets/media/images/{{tours_Image}}.jpg" class="image" alt="">
+            <h3 class="name">{{tours_Name}}</h3>
+            <p class="address">{{Tours_Slug}}</p>
+            <a href="/course_T/{{tours_Slug}}" class="btn">Xem Tours</a>
+         </div>
+      {{/each}}
    </section>
 
 </div>

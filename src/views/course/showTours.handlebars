@@ -1,0 +1,45 @@
+<!-- header section starts  -->
+
+<header class="header" data-aos="fade-down">
+
+    <section class="flex">
+
+      <a href="http://localhost:4000/" class="logo">VietNamTravia</a>
+
+      <nav class="navbar">
+         <a href="http://localhost:4000/">home</a>
+         <a href="http://localhost:4000/about">about</a>
+         <a href="http://localhost:4000/tours">tours</a>
+          <a href="http://localhost:4000/locations">destinations</a>
+         <a href="http://localhost:4000/contact">contact</a>
+      </nav>
+
+      <div id="menu-btn" class="fas fa-bars"></div>
+
+   </section>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- tours section starts  -->
+
+<div class="container tours">
+
+   <h1 class="heading" data-aos="zoom-out">popular places</h1>
+
+   <section class="grid">
+      {{#each courseTours}}
+         <div class="box" data-aos="fade-up">
+            <div class="price"><i class="fas fa-dollar-sign"></i><span>{{tours_Price}}</span></div>
+            <img src="/assets/media/images/{{tours_Image}}.jpg" class="image" alt="">
+            <h3 class="name">{{tours_Name}}</h3>
+            <p class="address">abc</p>
+            <a href="/course/{{tours_Slug}}" class="btn">Xem Tours</a>
+         </div>
+      {{/each}}
+   </section>
+
+</div>
+
+<!-- tours section ends -->

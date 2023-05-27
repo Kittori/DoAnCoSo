@@ -18,11 +18,14 @@
          <div class="fas fa-search" id="search-btn"> </div>
          <div class="fas fa-bars" id="menu-btn"> </div>
       </div>
-
-      <div class="search-form" style="border-radius: 0.5rem;">
-         <input type="search" id="search-box" name="keyword" placeholder="Searching . . .">
-         <label for="search-box" class="fas fa-search"></label>
-      </div>
+ 
+      <form action="/locations.find" method="post">
+         <div class="search-form" style="border-radius: 0.5rem;">
+            <label for="loca_Name"></label>
+             <input type="search" id="loca_Name" name="loca_Name" placeholder="Searching . . .">
+             <button type="submit" class="fas fa-search"></button>
+         </div>
+      </form>
 
    </section>
 

@@ -27,3 +27,4 @@ window.onscroll = () =>{
    navbar.classList.remove('active');
    searchBar.classList.remove('active');
 }
+$('.dropdown-toggle').dropdown()

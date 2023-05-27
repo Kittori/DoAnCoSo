@@ -9,21 +9,20 @@ const getConnection = require("../database/sql");
  * @param {string} acc_Email
  * @param {Datetime} acc_Birth
  * @param {string} acc_Phone
- * @param {char} acc_Gender
- * @param {char} acc_Role
+
  */
 
-async function create(acc_F_Name,acc_L_Name,acc_Account,acc_Password,acc_Email,acc_Birth,acc_Phone,acc_Gender,acc_Role){
+async function create(acc_F_Name,acc_L_Name,acc_Account,acc_Password,acc_Email,acc_Birth,acc_Phone){
     const pool = await getConnection();
     if (pool) {
         try {
             const result = await pool.query(`
-            INSERT INTO Account (acc_F_Name,acc_L_Name,acc_Account,acc_Password,acc_Email,acc_Birth,acc_Phone,acc_Gender,acc_Role) 
-            VALUES ('${acc_F_Name}', '${acc_L_Name}', '${acc_Account}', '${acc_Password}', '${acc_Email}', '${acc_Birth}', '${acc_Phone}', '${acc_Gender}', '${acc_Role}');
+            INSERT INTO Account (acc_F_Name,acc_L_Name,acc_Account,acc_Password,acc_Email,acc_Birth,acc_Phone) 
+            VALUES ('${acc_F_Name}', '${acc_L_Name}', '${acc_Account}', '${acc_Password}', '${acc_Email}', '${acc_Birth}', '${acc_Phone}');
             `);
             pool.close();
             return result;
-        } catch {err} {
+        } catch (err) {
             console.log(err);
             pool.close();
         return null;
@@ -44,7 +43,7 @@ async function getAll(){
             `);
             pool.close();
             return result;
-        } catch {err} {
+        } catch (err) {
             console.log(err);
             pool.close();
         return null;
