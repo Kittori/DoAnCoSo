@@ -1,26 +1,35 @@
-<!-- header section starts  -->
+<div class="container gallery">
+    {{#each courseTours}}
+   <div class="main-gallery-container">
+      <img src="/assets/media/images/{{tours_Image_1}}" loop controls class="main-gallery"></img>
+   </div>
 
-<header class="header" data-aos="fade-down">
+   <div class="gallery-list-container">
 
-    <section class="flex">
+      <div class="list active">
+         <img src="/assets/media/images/{{tours_Image_1}}" class="list-gallery"></img>
+         <h3 class="list-title">Ảnh 1</h3>
+      </div>
 
-      <a href="http://localhost:4000/" class="logo">VietNamTravia</a>
+      <div class="list active">
+         <img src="/assets/media/images/{{tours_Image_2}}" class="list-gallery"></img>
+         <h3 class="list-title">Ảnh 2</h3>
+      </div>
 
-      <nav class="navbar">
-         <a href="http://localhost:4000/">home</a>
-         <a href="http://localhost:4000/about">about</a>
-         <a href="http://localhost:4000/tours">tours</a>
-          <a href="http://localhost:4000/locations">destinations</a>
-         <a href="http://localhost:4000/contact">contact</a>
-      </nav>
+      <div class="list active">
+         <img src="/assets/media/images/{{tours_Image_3}}" class="list-gallery"></img>
+         <h3 class="list-title">Ảnh 3</h3>
+      </div>
 
-      <div id="menu-btn" class="fas fa-bars"></div>
+      <div class="list active">
+         <img src="/assets/media/images/{{tours_Image_4}}" class="list-gallery"></img>
+         <h3 class="list-title">Ảnh 4</h3>
+      </div>
+      {{/each}}
 
-   </section>
+   </div>
 
-</header>
-
-<!-- header section ends -->
+</div>
 
 <!-- tours section starts  -->
 

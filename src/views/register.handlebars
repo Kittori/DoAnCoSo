@@ -1,38 +1,5 @@
 <link rel="stylesheet" href="/assets/css/register.css">
 
-<!-- header section starts  -->
-
-<header class="header" data-aos="fade-down">
-
-   <section class="flex">
-
-      <a href="http://localhost:4000/" class="logo">VietNamTravia</a>
-
-      <nav class="navbar">
-         <a href="http://localhost:4000/">home</a>
-         <a href="http://localhost:4000/about">about</a>
-         <a href="http://localhost:4000/tours">tours</a>
-          <a href="http://localhost:4000/locations">destinations</a>
-         <a href="http://localhost:4000/contact">contact</a>
-      </nav>
-
-      <div class="Icon">
-         <div class="fas fa-search" id="search-btn"> </div>
-         <div class="fas fa-bars" id="menu-btn"> </div>
-      </div>
- 
-      <form action="/locations.find" method="post">
-         <div class="search-form" style="border-radius: 0.5rem;">
-            <label for="loca_Name"></label>
-             <input type="search" id="loca_Name" name="loca_Name" placeholder="Searching . . .">
-             <button type="submit" class="fas fa-search"></button>
-         </div>
-      </form>
-
-   </section>
-
-</header>
-
 <div class="login">
 	<form action="/register/create-new-account" method="post">
 		<label for="acc_F_Name">

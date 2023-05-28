@@ -11,11 +11,96 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body style="overflow: hidden;">
+
+<!-- header section starts  -->
+
+<header class="header" data-aos="fade-down">
+
+   <section class="flex">
+
+      <a href="http://localhost:4000/" class="logo">VietNamTravia</a>
+
+      <nav class="navbar">
+         <a href="http://localhost:4000/">home</a>
+         <a href="http://localhost:4000/about">about</a>
+         <a href="http://localhost:4000/tours">tours</a>
+          <a href="http://localhost:4000/locations">destinations</a>
+         <a href="http://localhost:4000/booking">booking</a>
+      </nav>
+
+      <div class="Icon">
+         <div class="fas fa-search" id="search-btn"> </div>
+         <div class="fas fa-bars" id="menu-btn"> </div>
+      </div>
+ 
+      <form action="/locations.find" method="post">
+         <div class="search-form" style="border-radius: 0.5rem;">
+            <label for="loca_Name"></label>
+             <input type="search" id="loca_Name" name="loca_Name" placeholder="Searching . . .">
+             <button type="submit" class="fas fa-search"></button>
+         </div>
+      </form>
+
+   </section>
+
+</header>
+<!-- header section ends -->
+
+<!-- import body website -->
+
     {{{body}}}
 
+<!-- end of import -->
 
+<!-- footer section start -->
+
+<section class="footer">
     
-</body>
+    <div class="box-container">
+
+        <div class="box">
+            <h3>Đường dẫn nhanh</h3>
+            <a href="#"><i class="fas fa-angle-right"></i> home </a>
+            <a href="#"><i class="fas fa-angle-right"></i> booking </a>
+            <a href="#"><i class="fas fa-angle-right"></i> tours </a>
+            <a href="#"><i class="fas fa-angle-right"></i> locations </a>
+            <a href="#"><i class="fas fa-angle-right"></i> login </a>
+        </div>
+
+         <div class="box">
+            <h3>Đường dẫn liên hệ</h3>
+            <a href="#"><i class="fas fa-angle-right"></i> ask question </a>
+            <a href="#"><i class="fas fa-angle-right"></i> about us </a>
+            <a href="#"><i class="fas fa-angle-right"></i> privacy policy </a>
+            <a href="#"><i class="fas fa-angle-right"></i> terms of use </a>
+        </div>
+
+        
+        <div class="box">
+            <h3>Thông tin liên hệ</h3>
+            <a href="#"><i class="fas fa-phone"></i> +84-902456891 </a>
+            <a href="#"><i class="fas fa-phone"></i> +84-523658941 </a>
+            <a href="#"><i class="fas fa-envelope"></i> 2100007513@ntt.edu.vn </a>
+            <a href="#"><i class="fas fa-map"></i> Việt Nam - Hồ Chí Minh city </a>
+        </div>
+
+        <div class="box">
+            <h3>Theo dõi chúng tôi tại</h3>
+            <a href="#"><i class="fab fa-facebook"></i> facebook </a>
+            <a href="#"><i class="fab fa-twitter"></i> twitter </a>
+            <a href="#"><i class="fab fa-instagram"></i> instagram </a>
+            <a href="#"><i class="fab fa-github"></i> github </a>
+        </div>
+
+    </div>
+
+    <div class="credit">created by <span>Lê Nguyễn Hoài Ân-2100007513</span> | all right severed!</div>
+
+</section>
+
+<!--  footer section end  -->
+
+</body>     
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 <!-- custom js file link  -->

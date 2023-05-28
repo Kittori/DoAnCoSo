@@ -1,77 +1,66 @@
-
-
-<!-- header section starts  -->
-
-<header class="header" data-aos="fade-down">
-
-   <section class="flex">
-
-      <a href="http://localhost:4000/" class="logo">VietNamTravia</a>
-
-      <nav class="navbar">
-         <a href="http://localhost:4000/">home</a>
-         <a href="http://localhost:4000/about">about</a>
-         <a href="http://localhost:4000/tours">tours</a>
-          <a href="http://localhost:4000/locations">destinations</a>
-         <a href="http://localhost:4000/contact">contact</a>
-      </nav>
-
-      <div class="Icon">
-         <div class="fas fa-search" id="search-btn"> </div>
-         <div class="fas fa-bars" id="menu-btn"> </div>
-      </div>
- 
-      <form action="/locations.find" method="post">
-         <div class="search-form" style="border-radius: 0.5rem;">
-            <label for="loca_Name"></label>
-             <input type="search" id="loca_Name" name="loca_Name" placeholder="Searching . . .">
-             <button type="submit" class="fas fa-search">{{findLocations}}</button>
-         </div>
-      </form>
-
-   </section>
-
-</header>
-
-<!-- header section ends -->
-
 <!-- booking section starts  -->
 
-<div class="container booking" data-aos="zoom-out">
+   <section class="booking" data-aos="zoom-out">
 
-   <section class="flex" data-aos="zoom-in" data-aos-delay="600">
+      <h1 class="heading">Booking Your Tour</h1>
 
-      <form action="booking/booking-new-tours" method="post">
-         <h3>Booking Your Tour</h3>
-         <p>Tên người đăng kí</p>
-         <input type="text" name="bo_userName" required maxlength="50" placeholder="điền họ và tên" class="box">
-         <p>Email</p>
-         <input type="text" name="bo_userEmail" required maxlength="50" placeholder="Email của bạn" class="box">
-         <p>Mã người dùng</p>
-         <input type="number" name="acc_ID" required maxlength="50" placeholder="nhập mã người dùng" class="box">
-         <div>
-                <p>Chọn địa điểm</p>
+      <form action="booking/booking-new-tours" method="post" class="book-form" data-aos="zoom-in" data-aos-delay="600">
+            <div class="flex">
+               <!--add user name-->
+               <div class="inputBox">
+                  <span>Tên khách hàng</span>
+                  <input type="text" required placeholder="Nhập họ tên" name="bo_userName" class="box">
+               </div>
+               <!--add user email-->
+               <div class="inputBox">
+                  <span>Email khách hàng</span>
+                  <input type="email" required placeholder="Nhập Email" name="bo_userEmail" class="box">
+               </div>
+               <!--add user ID-->
+               <div class="inputBox">
+                  <span>ID khách hàng</span>
+                  <input type="number" required placeholder="Nhập mã khách hàng" min="1" max="10" maxlength="2" name="acc_ID" class="box">
+               </div>
+               <!--chose your tours-->
+               <div class="inputBox">
+                <span>Chọn địa điểm</span>
                     <select name="tours_ID" id="tours_ID" class="box" required>
                         <option value="">Chose your Tours</option>
                         {{#each booking}}
                             <option value="{{tours_ID}}">{{tours_Name}}</option>
                         {{/each}}
                     </select>
-         </div>
-         <p>Chọn địa điểm</p>
-         <input type="text" name="bo_location" required maxlength="50" placeholder="enter tour location" class="box">
-         <p>Số điện thoại</p>
-         <input type="text" name="bo_userPhone" required maxlength="50" placeholder="điền số điện thoại" class="box">
-         <p>Chọn thời gian khởi hành</p>
-         <input type="date" name="bo_checkInDate" class="box" required>
-         <p>Số người đi</p>
-         <input type="number" name="bo_numberTourist" min="1" max="10" maxlength="2" placeholder="number of guests" required class="box">
-         <p>Ghi chú</p>
-         <input type="text" name="bo_note" class="box" required>
-         <input type="submit" value="book tour" name="search" class="btn">
+               </div>
+               <!--add user phone-->
+               <div class="inputBox">
+                  <span>Số điện thoại</span>
+                  <input type="text" required placeholder="Nhập số điện thoại" name="bo_userPhone" class="box">
+               </div>
+               <!--Write Locations-->
+               <div class="inputBox">
+                  <span>Địa Điểm</span>
+                  <input type="text" required placeholder="Nhập địa điểm" name="bo_locaName" class="box">
+               </div>
+               <!--add date to go-->
+               <div class="inputBox">
+                  <span>Ngày Khởi Hành</span>
+                  <input type="date" required name="bo_checkInDate" class="box">
+               </div>
+               <!--add number tourist-->
+               <div class="inputBox">
+                  <span>Số Người Đi</span>
+                  <input type="number" required placeholder="Nhập số người" min="1" max="10" maxlength="2" name="bo_numberTourist" class="box">
+               </div>
+               <!--add some note-->
+                <div class="inputBox">
+                  <span>Để Lại Lời Nhắn</span>
+                  <textarea name="bo_note" required class="box" required maxlength="100%" cols="196" rows="10" class="box"></textarea>
+               </div>
+            </div>
+
+                <input type="submit" value="book tour" name="search" class="btn">
       </form>
 
    </section>
-</div>
 
-<!-- home section ends -->
+<!--  booking section end    -->

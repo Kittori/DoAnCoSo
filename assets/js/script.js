@@ -27,4 +27,17 @@ window.onscroll = () =>{
    navbar.classList.remove('active');
    searchBar.classList.remove('active');
 }
-$('.dropdown-toggle').dropdown()
+
+let galleryList = document.querySelectorAll('.gallery-list-container .list');
+
+galleryList.forEach(gal =>{
+   gal.onclick = () =>{
+      galleryList.forEach(remove =>{remove.classList.remove('active')});
+      gal.classList.add('active');
+      let src = gal.querySelector('.list-gallery').src;
+      let title = gal.querySelector('.list-title').innerHTML;
+      document.querySelector('.main-gallery-container .main-gallery').src = src;
+      document.querySelector('.main-gallery-container .main-gallery').play();
+      document.querySelector('.main-gallery-container .main-gallery-title').innerHTML = title;
+   };
+});
